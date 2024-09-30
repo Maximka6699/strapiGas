@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fuels",
+  "info": {
+    "singularName": "fuel",
+    "pluralName": "fuels",
+    "displayName": "Fuel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fuel_id": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "fdus": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fdu.fdu",
+      "inversedBy": "fuels"
+    }
+  }
+}

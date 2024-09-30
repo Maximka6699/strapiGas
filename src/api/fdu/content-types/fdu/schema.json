@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fdus",
+  "info": {
+    "singularName": "fdu",
+    "pluralName": "fdus",
+    "displayName": "FDU"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fdu_id": {
+      "type": "uid"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "gas": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::gas.gas",
+      "inversedBy": "fdus"
+    },
+    "fuels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::fuel.fuel",
+      "mappedBy": "fdus"
+    }
+  }
+}

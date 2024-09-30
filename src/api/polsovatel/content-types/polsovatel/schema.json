@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "polsovatels",
+  "info": {
+    "singularName": "polsovatel",
+    "pluralName": "polsovatels",
+    "displayName": "polsovatel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "polsovatel_id": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "string"
+    },
+    "regdate": {
+      "type": "datetime"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "polsovatel"
+    },
+    "role": {
+      "type": "string"
+    },
+    "loyaltylvl": {
+      "type": "string"
+    },
+    "score": {
+      "type": "integer"
+    }
+  }
+}
